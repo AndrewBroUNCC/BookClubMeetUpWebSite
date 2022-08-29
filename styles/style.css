@@ -8,6 +8,12 @@ body {
     margin: 0;
     padding: 0;
     min-width: 40vh;
+    background-color: rgb(191, 192, 192);
+
+}
+
+main{
+    color: rgb(45, 49, 66)
 }
 
 hr {
@@ -20,47 +26,73 @@ ul {
     padding:0;
 }
 
+.footer-imgs {
+    float: right;
+    padding-right: 4%;
+    padding-left: 4%;
+    margin-right: 2%;
+    margin-top: .5%;
+}
+.twitter-logo {
+    width: 34px;
+    display: inline-block;
+}
+
+.facebook-logo {
+    display: inline-block;
+    width: 30px;   
+}
+
 header, footer {
-    background-color:darkgray;
+    background-color:rgb(79, 93, 117);
     padding-right: 4%;
     padding-bottom: 1%;
     padding-top: 1%;
     width: 100%;
+    color:#FFFFFF;
 }
 
 #page-container {
     /*Setting vh to the entire page and storing all of the body in it */
     position: relative;
-    min-height: 100vh;
+    min-height: 99vh;
   }
   
   /* This is for the Footer's height */
   #content-wrap {
-    padding-bottom: 4rem;    
+    padding-bottom: 3rem;    
   }
   
   footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 4rem;            
+    height: 3rem;            
   }
 
 
 header>a>img {
     padding-top: 1%;
+    padding-bottom: 1%;
     display: inline-block;
     width: 10%;
     min-width: 125px;
     padding-left: 4%;
 }
 
-nav {
+header>nav {
     
     display: inline-block;
     width: 50%;
     padding-left: 4%;
    }
+
+footer>nav {
+    display: inline-block;
+    width: 65%;
+    padding-left: 4%;
+    margin-top: .5%;
+}
 
 li {
     display: inline;
@@ -71,7 +103,7 @@ li {
 ul>li>a {
     display:inline-block;
     margin: auto;
-    color:blue;
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 20px;
 }
@@ -88,7 +120,7 @@ ul>li>a {
 
 ul>li>a:hover {
     text-decoration: underline;
-    color: rgb(11, 11, 153);
+    color: #a0a0a0;
 }
 
 .rightside {
@@ -109,11 +141,13 @@ main {
 }
 
 footer>nav>ul>li>a {
-    padding-top: 3%;
+    padding-top: 1%;
+
 }
 
 li.remove>a:hover{
     text-decoration: none;
-    color: blue;
+    color: #FFFFFF;
     cursor: default;
 }
+
