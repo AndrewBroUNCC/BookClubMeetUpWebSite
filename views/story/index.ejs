@@ -1,0 +1,50 @@
+<!--how to dynamicly load the header-->
+<%- include('../partials/header.ejs')%>
+
+
+                <main>
+                    
+                    <section>
+                        <article>
+                        <%if(connections.length){%>
+                            <%const list = [];%>
+                            <%connections.forEach(connection => {%>
+                                <%if(!list.includes(connection.group)){%>
+                                    <%list.push(connection.group);%>
+                                <%}%>
+                            <%});%>
+                            <%if(list.length){%>
+                                <%list.forEach(item => {%>
+                                    <h1><%= item%></h1>
+                                    <%connections.forEach(connection => {%>
+                                        <%if(connection.group == item){%>
+                                            <a href="/stories/<%= connection.id%>">
+                                                <p class="homeText tab"><%= connection.title%></p>
+                                            </a>        
+                                        <%}%>
+                                    <%});%>
+                                <%});%>
+                            <%}%>
+                        <%} else {%>
+                            <p class="homeText tab">No Meet ups or connections as of right now!</p>
+                        <%}%>
+                        </article>
+                        <!-- <%if(connections.length){%>
+                        <h1 >Fiction</h1>
+                        <article>
+                            <%connections.forEach(connection =>{%>
+                                <%if(connection.group === 'true'){%>
+                                    <a href="/stories/<%= connection.id%>">
+                                        <p class="homeText tab"><%= connection.title%></p>
+                                    </a>
+                                <%}%>
+                            <%});%>
+                        <%} else {%>
+                                <p class="homeText tab"> There are no connections to display.</p>
+                        <%}%>
+                        </article> -->
+                    </section>       
+                
+                </main>
+
+<%- include('../partials/footer.ejs')%>

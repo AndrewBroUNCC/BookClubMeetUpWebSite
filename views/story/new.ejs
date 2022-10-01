@@ -1,0 +1,57 @@
+<!--how to dynamicly load the header-->
+<%- include('../partials/header.ejs')%>
+
+                <main class="connectionsMain">
+                    <form action = '/stories' method = 'POST'>
+                    
+                        <p class="homeText connectionsText" >Topic</p>
+                        <input class="test3" name="group" type="text">
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText" >Title</p>
+                        <input class="test3" name="title" type="text" placeholder="  Title">
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText">Location</p>
+                        <input class="test3" name="location" type="text" placeholder="  Location">
+                        <br>
+                        <br>
+                        
+                        <p class="homeText connectionsText">Author</p>
+                        <input class="test3" name="author" type="text" placeholder="  Author">
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText">Content</p>
+                        <textarea rows="2" name="content" placeholder=" description"></textarea>
+                        <br>
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText">When</p>
+                        <input class="test3" name="createdAt" type="date">
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText ">Start Time</p>
+                        <input class="time" name="startTime" type="time">
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText">End Time</p>
+                        <input class="time" name="endTime" type="time">
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText">Image URL</p>   
+                        <input class="test3" type="url" name="url" placeholder="  imageUrl">
+                            <br>
+                            <br>
+
+                        <button>Submit</button>
+                    </form>
+                </main>
+
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,57 @@
+<!--how to dynamicly load the header-->
+<%- include('../partials/header.ejs')%>
+
+                <main>
+                    
+                    <section>
+                            <h1 class="float-left"><%= story.title%></h1>
+                            
+                            <form class="button-margin" action=""> 
+                                <button type="submit" formmethod="GET" formaction="/stories/<%= story.id%>/edit">Update</button>
+                                <button type="submit" formmethod="POST" formaction="/stories/<%= story.id%>?_method=DELETE">Delete</button>
+                            </form>
+                        
+                        <article class="test1">
+                            
+                            <div class="test2">
+                                <img class="connectionImg" src="<%= story.url%>" alt="picture of a hand holding fire">
+
+                                <br>
+                                <br>
+                                <p class="homeText connectionText">Hosted by <%= story.author%></p>
+                                <p class="homeText connectionText">
+                                    Date: <%= story.createdAt%>
+                                    <br>
+                                     Start: <%= story.startTime%> 
+                                     <%if(story.startTime > '11:59'){%>
+                                        PM
+                                     <%} else {%>
+                                        AM
+                                     <%}%>
+                                     End: <%= story.endTime%>
+                                     <%if(story.endTime > '11:59'){%>
+                                        PM
+                                     <%} else {%>
+                                        AM
+                                     <%}%>
+                                </p>
+                                <p class="homeText connectionText">Location: <%= story.location%></p>
+                            </div>
+                        </article>
+
+                    </section> 
+                    
+                    <section>
+                        
+                        <h1>Details</h1>
+                        
+                        <article>
+                        
+                            <p class="homeText"><%= story.content%></p>
+                        
+                        </article>
+                    </section>
+                
+                </main>
+
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,50 @@
+<!--how to dynamicly load the header-->
+<%- include('../partials/header.ejs')%>
+
+                <main class="connectionsMain">
+                    
+                    <form method="POST" action="/stories/<%= story.id %>?_method=PUT">
+                        
+                        <p class="homeText connectionsText" >Topic</p>
+                        <input class="test3" name="group" type="text" value="<%= story.group%>">
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText" >Title</p>
+                        <input class="test3" name="title" type="text" value="<%= story.title%>">
+                        <br>
+                        <br>
+
+                        
+                        <p class="homeText connectionsText">Content</p>
+                        <textarea rows="2" name="content" ><%= story.content%></textarea>
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText">Location</p>
+                        <input class="test3" name="location" type="text" value="<%= story.location%>">
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText">When</p>
+                        <input class="test3" name="createdAt" type="date" value="<%= story.createdAt%>">
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText">Start</p>
+                        <input class="test3" name="startTime" type="time" value="<%= story.startTime%>">
+                        <br>
+                        <br>
+
+                        <p class="homeText connectionsText">End</p>
+                        <input class="test3" name="endTime" type="time" value="<%= story.endTime%>">
+                        <br>
+                        <br>
+                        <br>     
+                        
+                        <button>Submit</button>
+                    </form>
+                
+                </main>
+
+<%- include('../partials/footer.ejs')%>

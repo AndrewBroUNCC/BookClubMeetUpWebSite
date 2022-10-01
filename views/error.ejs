@@ -1,0 +1,12 @@
+<!--how to dynamicly load the header-->
+<%- include('./partials/header.ejs')%>
+
+    <main>
+        <section>
+        <h1><%= error.status%> ERROR</h3> 
+        
+        <p class="homeText tab"><%= error.message%></p>
+        </section>
+    </main>
+
+<%- include('./partials/footer.ejs')%>
